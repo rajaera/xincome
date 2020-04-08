@@ -46,7 +46,7 @@ export class TrasactionFormComponent implements OnInit {
     this.filterAccount(AccountType.EXPENSES_GENERAL);
     this.createForm();
 
-    console.log(this.filteredAccounts);
+   
   }
   ngAfterViewInit() {
     
@@ -82,7 +82,8 @@ export class TrasactionFormComponent implements OnInit {
     this.onDateChange( this.transactionDate);
     this.formGroup.value.uuid = new Date().getTime();
     this.formGroup.value.transactionDate = this.transactionDate;
-    this.formGroup.value.account = this.accountService.findAccountByUuid(this.formGroup.value.accountUuid);
+    let account = this.accountService.findAccountByUuid(this.formGroup.value.accountUuid);
+    this.formGroup.value.account = account;
     
     this.lastRecorded = this.formGroup.value;
     return this.ledger.addRecord(this.formGroup.value);

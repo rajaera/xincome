@@ -14,7 +14,7 @@
       <!-- Date Column -->
       <ng-container matColumnDef="accType">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Account Type </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.accountType}} </mat-cell>
+        <mat-cell *matCellDef="let row"> {{row.accountType | accountTypeName }} </mat-cell>
       </ng-container>
   
       <!-- Desciption Column -->

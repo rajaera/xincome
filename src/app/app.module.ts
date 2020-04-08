@@ -13,9 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { SettingsComponent } from './settings/settings.component';
 import { TrasactionFormComponent } from './trasaction-form/trasaction-form.component';
 import { LedgerComponent } from './ledger/ledger.component';
-import { FindAccountTransactionTypePipe } from './find-account-transaction-type.pipe';
 import { RecordCardComponent } from './record-card/record-card.component';
-import { AccountNamePipe } from './accountname.pipe';
 import { DebitSumPipe } from './debit-sum.pipe';
 import { CreditSumPipe } from './credit-sum.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -53,6 +51,7 @@ import { AccountHomeComponent } from './account-home/account-home.component';
 import { AccountFormComponent } from './account-form/account-form.component';
 import { AccountListComponent } from './account-list/account-list.component';
 import { FilterAccountPipe } from './filter-account.pipe';
+import { AccountTypeNamePipe } from './account-type-name.pipe';
 
 
 
@@ -63,10 +62,8 @@ import { FilterAccountPipe } from './filter-account.pipe';
     HomeComponent,
     SettingsComponent,
     TrasactionFormComponent,
-    LedgerComponent,
-    FindAccountTransactionTypePipe,
-    RecordCardComponent,
-    AccountNamePipe,
+    LedgerComponent,    
+    RecordCardComponent,   
     DebitSumPipe,
     CreditSumPipe,
     LoginComponent,
@@ -76,6 +73,7 @@ import { FilterAccountPipe } from './filter-account.pipe';
     AccountFormComponent,
     AccountListComponent,
     FilterAccountPipe,
+    AccountTypeNamePipe,
       
     
   ],
@@ -105,9 +103,7 @@ import { FilterAccountPipe } from './filter-account.pipe';
     MatListModule
       
   ],
-  providers: [
-    FindAccountTransactionTypePipe,
-    AccountNamePipe,
+  providers: [        
     DatePipe,
     MatMomentDateModule,
     DebitSumPipe,
@@ -116,7 +112,8 @@ import { FilterAccountPipe } from './filter-account.pipe';
     UserRegistryService,
     AuthService,
     AuthGuard,
-    FilterAccountPipe
+    FilterAccountPipe,
+    AccountTypeNamePipe
   ],
   bootstrap: [AppComponent]
 })

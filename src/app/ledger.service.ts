@@ -67,7 +67,7 @@ export class LedgerService {
   balance() : number {    
     let credit = this.creditPipe.transform(this.ledgerList());
     let debit = this.debitPipe.transform(this.ledgerList());
-
+    console.log(this.ledgerList());
     return credit - debit;
   }
 

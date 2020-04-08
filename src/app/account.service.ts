@@ -63,13 +63,14 @@ export class AccountService {
   }
 
   findAccountByUuid(uuid : string) : Account {
+    let account = null;
     this.accountList().forEach(element => {
       if (element.uuid === uuid) {
-        return element;
+        account = element;
       }
     });
 
-    return null;
+    return account;
   }
 
 

@@ -30,13 +30,13 @@
       <!-- debit Column -->
       <ng-container matColumnDef="debit">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Debit </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{ ( row.account.accountType | findAccountTransactionType ) == 1 ? row.amount : "" }} </mat-cell>
+        <mat-cell *matCellDef="let row"> {{ ( row.account.accountType  == 1 ) ? row.amount : "" }} </mat-cell>
       </ng-container>
 
       <!-- credit Column -->
       <ng-container matColumnDef="credit">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Credit </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{ ( row.account.accountType | findAccountTransactionType ) == 2 ? row.amount : "" }} </mat-cell>
+        <mat-cell *matCellDef="let row"> {{ ( row.account.accountType == 2 )  ? row.amount : "" }} </mat-cell>
       </ng-container>  
       
       

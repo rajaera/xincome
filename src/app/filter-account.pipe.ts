@@ -8,7 +8,7 @@ import { AccountType } from './account-type.enum';
 export class FilterAccountPipe implements PipeTransform {
 
   transform(accounts: Account[], filterBy : AccountType): Account[] {
-   let filterAccounts = null;
+   let filterAccounts = [];
 
    accounts.forEach(element => {
      if (element.accountType === filterBy) {

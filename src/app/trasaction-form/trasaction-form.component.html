@@ -19,8 +19,8 @@
             </mat-select>
          </mat-form-field>
          <mat-form-field class="example-full-width">            
-          <mat-select  formControlName="accountCode" placeholder="Select Account">
-            <mat-option   *ngFor="let account of filteredAccounts" [value]="account.uuid">{{ account ? account.accountName : ''}} [{{ account ? account.accountCode : ''}}]</mat-option>
+          <mat-select  formControlName="accountUuid" placeholder="Select Account">
+            <mat-option   *ngFor="let account of filteredAccounts" [value]="account.uuid">{{ account.accountName}} [{{ account.accountCode }}]</mat-option>
                        
           </mat-select>
        </mat-form-field>
