@@ -1,0 +1,31 @@
+<div class="account-form-container">
+    
+    <h2>Add New Account</h2>
+    
+    
+    <div class="form-group-div"> 
+      <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+        
+        <mat-form-field class="example-full-width">            
+            <mat-select value="1" formControlName="accountType" placeholder="Account Type">
+              <mat-option value="1">EXPENSES</mat-option>
+              <mat-option value="2">INCOME</mat-option>              
+            </mat-select>
+          </mat-form-field>
+        <br />        
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Name of the Account" formControlName="accountName">          
+          </mat-form-field>
+          <br />
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Account Code" formControlName="accountCode">          
+          </mat-form-field>
+          <br />
+        
+          <div class="submit-btn-div">
+            <button mat-raised-button type="submit" class="submit-btn">Create Account</button>
+          </div>
+    
+      </form>
+    </div>
+  </div>  

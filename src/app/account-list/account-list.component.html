@@ -1,0 +1,43 @@
+<h2 class="list-header">Account List</h2>
+<div class="example-header">
+    
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>  
+    
+  </div>
+  
+  <div >
+  
+    <mat-table [dataSource]="dataSource" matSort class="example-container mat-elevation-z8">
+  
+      <!-- Date Column -->
+      <ng-container matColumnDef="accType">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Account Type </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.accountType}} </mat-cell>
+      </ng-container>
+  
+      <!-- Desciption Column -->
+      <ng-container matColumnDef="accCode">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Code </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.accountCode}} </mat-cell>
+      </ng-container>
+  
+      <!-- Account Column -->
+      <ng-container matColumnDef="accName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Account Name </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.accountName }} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;">
+      </mat-row>
+    </mat-table>
+    
+    <mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+  </div>
+  
+  
+  <!-- Copyright 2018 Google Inc. All Rights Reserved.
+      Use of this source code is governed by an MIT-style license that
+      can be found in the LICENSE file at http://angular.io/license -->

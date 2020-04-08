@@ -1,0 +1,22 @@
+<mat-card style="background-color: #536DFE; color: white" [@cardFadeOutState]="cardFadeOutStateName">
+    <mat-card-title *ngIf="showRecordContent" class="last-record-title">Last Record</mat-card-title>
+    <mat-card-content>
+        <div *ngIf="showRecordContent"  class="record-data-div">
+            <p>Account : {{transactionRecord.account.accountName }}</p>
+            <P>Description : {{transactionRecord.description}}</P>
+            <p>Amount : LKR {{transactionRecord.amount | number : '1.2-2'}}</p>
+        </div>
+        
+        <div *ngIf="!showRecordContent" [@deletedSuccessFadeInState]="deleteSuccessFadeInStateName" class="delete-animation-div" style="width: 100%;text-align: center;font-size: 2em;">
+            Record Deleted
+            <mat-icon>done_all</mat-icon>
+        </div>
+    </mat-card-content>
+    <mat-card-footer>
+      <div class="last-record-trash-div">            
+        <a *ngIf="showRecordContent" mat-button routerLink="." (click)="delete()">          
+            Delete Record<mat-icon>delete_forever</mat-icon>                   
+        </a>
+      </div>          
+    </mat-card-footer>
+  </mat-card>
