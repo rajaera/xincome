@@ -1,11 +1,27 @@
 :host {
-    margin-top: 4em;
+  width: 100%;
+}
+
+.account-list-container {
+  width: 100%;
+  margin-top: 2em;
+}
+
+.account-list-toolbar {
+    width: 100%;  
+
 }
 
 
 
-  .list-header {
-      text-align: center;
+.list-header {
+      margin-left: 2em;
+      display: inline;
+  }
+
+  .create-acc-btn {
+    float: right;
+    margin-right: 2em;
   }
   
   .example-header {

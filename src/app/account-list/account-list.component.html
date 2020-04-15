@@ -1,4 +1,12 @@
-<h2 class="list-header">Account List</h2>
+<div class="account-list-container">
+<div class="account-list-toolbar">
+  <h2 class="list-header"><mat-icon color="primary">account_balance</mat-icon>&nbsp;Account List</h2>
+
+  <a class="create-acc-btn" 
+  mat-raised-button color="primary" 
+  [routerLink]="'/account/new-account'"> 
+  <mat-icon>add</mat-icon> &nbsp; Create Account </a>
+</div>
 <div class="example-header">
     
     <mat-form-field>
@@ -37,7 +45,7 @@
     <mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
   </div>
   
-  
+</div> 
   <!-- Copyright 2018 Google Inc. All Rights Reserved.
       Use of this source code is governed by an MIT-style license that
       can be found in the LICENSE file at http://angular.io/license -->
